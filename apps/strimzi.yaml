@@ -11,9 +11,10 @@ spec:
     namespace: kafka
   project: default
   source:
+    chart: strimzi-kafka-operator
     path: .
-    repoURL: https://github.com/sheveg/strimzi-operator.git
-    targetRevision: main
+    repoURL: https://strimzi.io/charts/
+    targetRevision: 0.36.1
     helm:
       releaseName: strimzi
   syncPolicy:
