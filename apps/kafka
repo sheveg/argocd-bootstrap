@@ -10,6 +10,9 @@ spec:
     namespace: kafka
   project: default
   source:
+    chart: kafka
     path: .
     repoURL: https://github.com/sheveg/kafka-helm.git
     targetRevision: HEAD
+    helm:
+      releaseName: kafka
