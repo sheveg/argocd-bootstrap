@@ -11,7 +11,7 @@ spec:
     namespace: postgres
   project: default
   sources:
-    - chart: postgres-operator-charts
+    - chart: postgres-operator
       path: .
       repoURL: https://opensource.zalando.com/postgres-operator/charts/postgres-operator
       targetRevision: 1.10.0
@@ -20,7 +20,7 @@ spec:
         valuesObject:
           min_instances: 1
           max_instances: 1
-    - chart: postgres-operator-ui-charts
+    - chart: postgres-operator-ui
       path: .
       repoURL: https://opensource.zalando.com/postgres-operator/charts/postgres-operator-ui
       targetRevision: 1.10.0
