@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kafka-cluster
+  name: postgres-cluster
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "2"
@@ -10,14 +10,14 @@ metadata:
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: kafka
+    namespace: postgres
   project: default
   source:
     path: .
-    repoURL: https://github.com/sheveg/kafka-helm.git
+    repoURL: https://github.com/sheveg/postgres-helm.git
     targetRevision: main
     helm:
-      releaseName: kafka-cluster
+      releaseName: postgres-cluster
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
