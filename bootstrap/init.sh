@@ -14,10 +14,6 @@ helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 helm install argocd -n argocd argo/argo-cd -f values.yaml
 
-# Create project
-echo "Creating the main project..."
-kubectl apply -f manifests/project.yaml
-
 # Create the app of apps
 echo "Creating the app of apps..."
 kubectl apply -f manifests/application.yaml
