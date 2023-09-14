@@ -18,4 +18,5 @@ helm install argocd -n argocd argo/argo-cd -f values.yaml
 echo "Creating the app of apps..."
 kubectl apply -f manifests/application.yaml
 
-kubectl port-forward service/argocd-server -n argocd 8080:443
+kubectl port-forward svc/argocd-server -n argocd 8080:443 &
+kubectl port-forward svc/postgres-operator-ui -n postgres 8081:443 &
