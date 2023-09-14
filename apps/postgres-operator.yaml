@@ -28,6 +28,7 @@ spec:
       targetRevision: 1.10.0
       helm:
         releaseName: postgres-operator-ui
+        targetNamespace: "*"
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
