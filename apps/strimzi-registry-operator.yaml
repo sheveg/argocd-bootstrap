@@ -16,9 +16,10 @@ spec:
     repoURL: https://lsst-sqre.github.io/charts/
     targetRevision: 2.1.0
     helm:
-      clusterName: kafka-cluster
-      clusterNamespace: kafka
-      operatorNamespace: kafka
+      valuesObject:
+        clusterName: kafka-cluster
+        clusterNamespace: kafka
+        operatorNamespace: kafka
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
