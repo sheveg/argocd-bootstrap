@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: strimzi-operator
+  name: strimzi-registry-operator
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
